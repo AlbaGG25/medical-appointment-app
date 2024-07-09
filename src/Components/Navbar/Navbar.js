@@ -1,5 +1,6 @@
 
 import './Navbar.css';
+import StayHealthyLogo from '../../Images/StayHealthyLogo.png';
 
 function Navbar() {
   return (
@@ -7,7 +8,7 @@ function Navbar() {
       <header>
         <nav>
             <a href="../Landing_Page/LandingPage.html" className="nav__logo">
-                <img src="../Images/StayHealthyLogo.png" alt="Stay Healthy Logo, a stethoscope in heart shape with the words Stay Healthy"/>
+                <img src={StayHealthyLogo} alt="Stay Healthy Logo, a stethoscope in heart shape with the words Stay Healthy"/>
             </a>
             <div className="nav__icon" >
                 <i className="fa fa-times fa fa-bars"></i>
@@ -18,8 +19,6 @@ function Navbar() {
                 <a href="#" className="link">Appointments</a>
                 <a href="#" className="link">Health Blog</a>
                 <a href="#" className="link">Reviews</a>
-            </div>
-             <div>
                 <a href="../Sign_Up/Sign_Up.html" >
                   <button className="btn1">SignUp</button>
                 </a>

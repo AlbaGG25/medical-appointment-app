@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 import Navbar from './Components/Navbar/Navbar';
-
+import LandingPage from './Components/Landing_Page/LandingPage';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
 
        
           <Routes>
-            
+          <Route path="/" element={< LandingPage />}/>
           </Routes>
         </BrowserRouter>
     </div>
