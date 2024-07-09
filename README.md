@@ -1,1 +1,0 @@
-# medical-appointment-app
