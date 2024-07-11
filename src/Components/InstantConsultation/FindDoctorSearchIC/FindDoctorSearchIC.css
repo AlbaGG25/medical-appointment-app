@@ -171,8 +171,8 @@
     overflow: hidden;
 } 
 .finddoctor .mainimg{
-    width: 312px;
-    height: 312px;
+    width: 31rem;
+    height: 31rem;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;

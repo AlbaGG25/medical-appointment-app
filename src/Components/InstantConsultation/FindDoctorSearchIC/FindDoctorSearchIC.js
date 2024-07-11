@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FindDoctorSearchIC.css';
+import find from '../../../Images/find.jpg';
 import { useNavigate, Navigate } from 'react-router-dom';
 
 
@@ -22,8 +23,10 @@ const FindDoctorSearchIC = () => {
         <div className='finddoctor'>
             <center>
                 <h1>Find a doctor and Consult instantly</h1>
-                <div>               <i style={{color:'#000000',fontSize:'20rem'}} className="fa fa-user-md"></i>
-</div>                <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <div>       
+                  <img className="mainimg" src={find} alt="Image of a doctor, we can't see their face, it depicts only their arm a partially his body holding a folder "/>    
+                </div>   
+                              <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                     <div className="doctor-search-box">
 
                         <input type="text" className="search-doctor-input-box" placeholder="Search doctors, clinics, hospitals, etc." onFocus={() => setDoctorResultHidden(false)} onBlur={() => setDoctorResultHidden(true)} value={searchDoctor} onChange={(e) => setSearchDoctor(e.target.value)} />

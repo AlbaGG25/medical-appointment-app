@@ -117,7 +117,7 @@ const Sign_Up = () => {
       };
 
     return (
-        <div className="container" style={{marginTop:'8%'}}>
+        <div className="container" style={{marginTop:'10%'}}>
             <div className="signup-text"> 
                 <h1>Sign Up</h1>
             </div>

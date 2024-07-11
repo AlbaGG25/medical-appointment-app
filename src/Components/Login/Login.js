@@ -70,7 +70,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="container" style={{marginTop:'10%'}}>
         <div className="login-grid">
           <div className="login-text">
             <h2>Login</h2>
