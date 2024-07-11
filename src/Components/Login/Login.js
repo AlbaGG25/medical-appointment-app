@@ -52,6 +52,7 @@ const Login = () => {
       
       sessionStorage.setItem('auth-token', json.authtoken);
       sessionStorage.setItem('email', email);
+      
 
       navigate('/');
       window.location.reload();
