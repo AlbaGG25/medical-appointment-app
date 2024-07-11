@@ -1,6 +1,9 @@
 
 import './Navbar.css';
 import StayHealthyLogo from '../../Images/StayHealthyLogo.png';
+import { Link } from 'react-router-dom';
+import Sign_Up from '../Sign_Up/SignUp';
+import Login from '../Login/Login'
 
 function Navbar() {
   return (
@@ -19,12 +22,8 @@ function Navbar() {
                 <a href="#" className="link">Appointments</a>
                 <a href="#" className="link">Health Blog</a>
                 <a href="#" className="link">Reviews</a>
-                <a href="../Sign_Up/Sign_Up.html" >
-                  <button className="btn1">SignUp</button>
-                </a>
-                <a href="../Login/Login.html">
-                  <button className="btn1">Login</button>
-                </a>
+                <Link to="/Sign_Up"><button className="btn1">SignUp</button></Link>
+                <Link to="/Login"><button className="btn1">Login</button></Link>
             </div>
         </nav>
     </header>
