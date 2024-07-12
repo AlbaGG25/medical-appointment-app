@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import doctor from '../../Images/doctor.jpg';
 import './DoctorCard.css';
 import AppointmentForm from '../AppointmentForm/AppointmentForm'
 import { v4 as uuidv4 } from 'uuid';
@@ -34,7 +35,7 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
     <div className="doctor-card-container">
       <div className="doctor-card-details-container">
         <div className="doctor-card-profile-image-container">
-            <img src={profilePic} alt="Image of a doctor"/>
+            <img src={doctor} alt="Image of a doctor"/>
         </div>
         <div className="doctor-card-details">
           <div className="doctor-card-detail-name">{name}</div>

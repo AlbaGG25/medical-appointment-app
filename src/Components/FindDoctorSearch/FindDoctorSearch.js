@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './FindDoctorSearch.css';
-import find from '../../Images/find.jpg';
+import find2 from '../../Images/find2.png';
 import search from '../../Images/search.svg';
 import { useNavigate, Navigate } from 'react-router-dom';
 
 
 const initSpeciality = [
-    'Cardiologist', 'Dentist', 'Gynecologist', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Psychiatrist', 'Stomatologist',
+    'Cardiologist', 'Dentist', 'Gynecologist/Obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Psychiatrist', 'Bone',
 ]
 
 const FindDoctorSearch = () => {
@@ -23,9 +23,9 @@ const FindDoctorSearch = () => {
     return (
         <div className='finddoctor' style={{ marginTop: '14%' }}>
             <center>
-                <h1>Find a doctor and Consult instantly</h1>
+                <h1>Find a doctor and Book your appointment</h1>
                 <div>
-                    <img className="mainimg" src={find} alt="Image of a doctor, we can't see their face, it depicts only their arm a partially his body holding a folder " />
+                    <img className="mainimg" src={find2} alt="Image of a doctor, we can't see their face, it depicts only their arm a partially his body holding a folder " />
                 </div>
                 <div className="home-search-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <div className="doctor-search-box">
