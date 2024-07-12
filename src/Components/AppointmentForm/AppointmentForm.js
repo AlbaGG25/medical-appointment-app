@@ -6,8 +6,8 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [date, setDate] = useState('01/01/2024')
     const [selectedSlot, setSelectedSlot] = useState(null);
   
-    const handleSlotSelection = (slot) => {
-      setSelectedSlot(slot);
+    const handleSlotSelection = (e) => {
+      setSelectedSlot(e.target.value);
     };
   
     const handleFormSubmit = (e) => {
@@ -40,6 +40,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
             onChange={(e) => setPhoneNumber(e.target.value)}
             required
           />
+        </div>
         <div className="form-group">
           <label htmlFor="date">Date of appointment:</label>
           <input
@@ -51,15 +52,17 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="datetime">Date of appointment:</label>
+          <label htmlFor="appt-time">Book time slot:</label>
           <input
-            type="datetime"
-            id="datetime"
-            value={slot}
+            type="time" 
+            min="09:00" 
+            max="18:00" 
+            id="appt-time"
+            name="appt-time"
+            value={selectedSlot}
             onChange={handleSlotSelection}
             required
           />
-        </div>
         </div>
         <button type="submit">Book Now</button>
       </form>

@@ -26,7 +26,7 @@ const FindDoctorSearchIC = () => {
                 <div>       
                   <img className="mainimg" src={find} alt="Image of a doctor, we can't see their face, it depicts only their arm a partially his body holding a folder "/>    
                 </div>   
-                              <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                     <div className="doctor-search-box">
 
                         <input type="text" className="search-doctor-input-box" placeholder="Search doctors, clinics, hospitals, etc." onFocus={() => setDoctorResultHidden(false)} onBlur={() => setDoctorResultHidden(true)} value={searchDoctor} onChange={(e) => setSearchDoctor(e.target.value)} />

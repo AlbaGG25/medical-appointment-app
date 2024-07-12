@@ -49,6 +49,7 @@ router.post('/register',[
         return res.status(400).json({error: error.array()});
     }
 
+    const { email, name, password, phone } = req.body;
     try {
         console.log('Registering user:', { email, name, phone });
         const checkMultipleUser1 = await UserSchema.findOne({ email : req.body.email });
