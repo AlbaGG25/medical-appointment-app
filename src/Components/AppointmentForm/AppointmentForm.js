@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
-    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [date, setDate] = useState('2024-01-01')
     const [selectedSlot, setSelectedSlot] = useState('');
@@ -12,8 +12,8 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
   
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      onSubmit({ name, phoneNumber, date, selectedSlot });
-      setName('');
+      onSubmit({ username, phoneNumber, date, selectedSlot });
+      setUsername('');
       setPhoneNumber('');
       setDate('2024-01-01');
       setSelectedSlot('');
@@ -26,8 +26,8 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
           <input
             type="text"
             id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             required
           />
         </div>

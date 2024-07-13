@@ -5,6 +5,8 @@ import doctor from '../../Images/doctor.jpg';
 import './DoctorCard.css';
 import AppointmentForm from '../AppointmentForm/AppointmentForm';
 import { v4 as uuidv4 } from 'uuid';
+import Notification from '../Notification/Notification';
+
 
 const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
   const [showModal, setShowModal] = useState(false);
@@ -30,22 +32,14 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
   };
 
   return (
-    <div className="doctor-card-container">
-      {appointments.length > 0 && (
-        <div className="appointment-notification">
-          <h3>Appointment Booked!</h3>
-          {appointments.map((appointment) => (
-            <div className="bookedInfo" key={appointment.id}>
-              <p>Name: {appointment.name}</p>
-              <p>Phone Number: {appointment.phoneNumber}</p>
-              <p>Date of appointment: {appointment.date}</p>
-              <p>Time slot selected: {appointment.selectedSlot}</p>
-              <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
-            </div>
-          ))}
-        </div>
+    <>
+     {appointments.length > 0 && (
+        <Notification
+        appointment={appointments[0]}
+        handleCancel={handleCancel}
+      />
       )}
-      
+    <div className="doctor-card-container">
       <div className="doctor-card-details-container">
         <div className="doctor-card-profile-image-container">
           <img src={doctor} alt="Image of a doctor" />
@@ -96,7 +90,9 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
                   <h3 style={{ textAlign: 'center' }}>Appointment Booked!</h3>
                   {appointments.map((appointment) => (
                     <div className="bookedInfo" key={appointment.id}>
-                      <p>Name: {appointment.name}</p>
+                      <p>Doctor: {name}</p>
+                      <p>Specialty: {speciality}</p>
+                      <p>Name: {appointment.username}</p>
                       <p>Phone Number: {appointment.phoneNumber}</p>
                       <p>Date of appointment: {appointment.date}</p>
                       <p>Time slot selected: {appointment.selectedSlot}</p>
@@ -112,6 +108,7 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
         </Popup>
       </div>
     </div>
+    </>
   );
 };
 
