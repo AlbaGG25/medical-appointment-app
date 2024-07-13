@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [date, setDate] = useState('01/01/2024')
-    const [selectedSlot, setSelectedSlot] = useState(null);
+    const [date, setDate] = useState('2024-01-01')
+    const [selectedSlot, setSelectedSlot] = useState('');
   
     const handleSlotSelection = (e) => {
       setSelectedSlot(e.target.value);
@@ -15,8 +15,8 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
       onSubmit({ name, phoneNumber, date, selectedSlot });
       setName('');
       setPhoneNumber('');
-      setDate('01/01/2024');
-      setSelectedSlot(null);
+      setDate('2024-01-01');
+      setSelectedSlot('');
     };
   
     return (
