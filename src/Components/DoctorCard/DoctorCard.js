@@ -37,6 +37,8 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
         <Notification
         appointment={appointments[0]}
         handleCancel={handleCancel}
+        doctorName={name} 
+        doctorSpeciality={speciality}
       />
       )}
     <div className="doctor-card-container">

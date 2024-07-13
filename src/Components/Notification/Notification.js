@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Notification.css';
 
-const Notification = ({ children, appointment, handleCancel, name, speciality }) => {
+const Notification = ({ children, appointment, handleCancel, doctorName, doctorSpeciality }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState('');
@@ -45,8 +45,8 @@ const Notification = ({ children, appointment, handleCancel, name, speciality })
         <div className="appointment-card">
         <div className="appointment-card__content">
               <h3>Appointment Details</h3>
-                <p><strong>Doctor:</strong>  {doctorData?.name}</p>
-                <p><strong>Speciality:</strong>  {doctorData?.specialty}</p>
+                <p><strong>Doctor:</strong>  {doctorName}</p>
+                <p><strong>Speciality:</strong>  {doctorSpeciality}</p>
                 <p><strong>Name:</strong>  {appointment.username}</p>
                 <p><strong>Phone Number:</strong>  {appointment.phoneNumber}</p>
                 <p><strong>Date of appointment:</strong>  {appointment.date}</p>
