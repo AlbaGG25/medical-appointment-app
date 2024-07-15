@@ -5,9 +5,6 @@ import './ProfileCard.css';
 const ProfileCard = ({ username }) => {
   return (
     <div className="profile-card">
-      <div className="profile-card__header">
-        Welcome, {username}
-      </div>
       <ul className="profile-card__list">
         <li>
           <Link to="/profile">Your Profile</Link>
