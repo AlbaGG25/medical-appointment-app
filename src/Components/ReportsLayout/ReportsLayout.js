@@ -3,6 +3,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { v4 as uuidv4 } from 'uuid';
 import './ReportsLayout.css'
+import patient_report from '../../Images/patient_report.pdf'
 
 const ReviewForm = () => {
     const doctors = [
@@ -26,7 +27,7 @@ const ReviewForm = () => {
     return (
         <>
           <h2 style={{ width: '70%', borderCollapse: 'collapse', marginTop: '15%', marginInline: 'auto' }}>Reports</h2>
-            <table className="review-table" style={{ width: '70%', borderCollapse: 'collapse',  marginInline: 'auto' }}>
+            <table className="review-table" >
                 <thead>
                     <tr>
                         <th>Number</th>
@@ -44,12 +45,12 @@ const ReviewForm = () => {
                             <td>{doctor.speciality}</td>
                             <td>
                                 <button className="review-table_body-button" onClick={() => handleReview(doctor)}>
-                                    <a target='_blank' href='Patient_Information.pdf' className="report-link" rel="noreferrer">View Report</a>
+                                    <a target='_blank' href={patient_report} className="report-link" rel="noreferrer">View Report</a>
                                 </button>
                             </td>
                             <td>
                                 <button className="review-table_body-button" onClick={() => handleReview(doctor)}>
-                                    <a target='_blank' href='Patient_Information.pdf' className="report-link" rel="noreferrer">Download Report</a>
+                                    <a target='_blank' href='' download={patient_report} className="report-link" rel="noreferrer">Download Report</a>
                                 </button>
                             </td>
                         </tr>

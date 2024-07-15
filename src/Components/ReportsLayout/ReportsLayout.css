@@ -1,3 +1,14 @@
+
+.review-table{
+    width: 70%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.review-table_body-button{
+    border-radius: 10px;;
+}
+
 .report-link{
     color: white;
 }
