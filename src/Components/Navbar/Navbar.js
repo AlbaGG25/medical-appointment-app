@@ -4,6 +4,7 @@ import "./Navbar.css";
 import StayHealthyLogo from '../../Images/StayHealthyLogo.png';
 import Sign_Up from '../Sign_Up/SignUp';
 import Login from '../Login/Login'
+import ProfileCard from '../ProfileCard/ProfileCard'
 
 
 const Navbar = () => {
@@ -74,7 +75,8 @@ const Navbar = () => {
         {isLoggedIn?(
           <>
             <li className="link" onClick={handleDropdown}>
-                Welcome, {emailPrefix}!
+              Welcome, {emailPrefix}!
+              {showDropdown && <ProfileCard username={emailPrefix} />}
             </li>
             <li className="link">
               <button className="btn2" onClick={handleLogout}>
