@@ -1,0 +1,22 @@
+.review-table{
+    width: 50rem;
+    height: 50rem;
+    color: black;
+    text-align: center;
+}
+th, td {
+  border-bottom: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.review-table_body-button{
+    width: 60%;
+}
