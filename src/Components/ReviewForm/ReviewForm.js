@@ -23,15 +23,16 @@ const ReviewForm = () => {
         setShowModal(true);
     };
 
-    const handleCancel = (reviewId) => {
-        const updatedReviews = reviews.filter((review) => review.id !== reviewId);
-        setReviews(updatedReviews);
+    const handleCancel = () => {
+        setShowModal(false);
+        setSelectedDoctor(null);
     };
 
     const handleFormSubmit = (reviewData) => {
         const newReview = {
             id: uuidv4(),
             ...reviewData,
+            doctorId: selectedDoctor.number,
         };
         const updatedReviews = [...reviews, newReview];
         setReviews(updatedReviews);
@@ -40,7 +41,7 @@ const ReviewForm = () => {
 
     return (
         <>
-            <table className="review-table" style={{ width: '70%', borderCollapse: 'collapse', marginTop: '20%', marginInline: 'auto' }}>
+            <table className="review-table" style={{ width: '70%', borderCollapse: 'collapse', marginTop: '15%', marginInline: 'auto' }}>
                 <thead>
                     <tr>
                         <th>Number</th>
@@ -67,12 +68,12 @@ const ReviewForm = () => {
                 </tbody>
             </table>
 
-            <Popup open={showModal} onClose={() => setShowModal(false)} modal>
+            <Popup style={{ width: '40%', borderRadius: '10px'}} open={showModal} onClose={handleCancel} modal >
                 {selectedDoctor && (
                     <GiveReview
                         doctor={selectedDoctor}
-                        onSubmit={(formData) => handleFormSubmit({ ...formData, doctorId: selectedDoctor.number })}
-                        onCancel={() => setShowModal(false)}
+                        onSubmit={handleFormSubmit}
+                        onCancel={handleCancel}
                     />
                 )}
             </Popup>

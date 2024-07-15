@@ -1,5 +1,27 @@
 .form-review{
-    padding: 2rem; 
-    background-color:lightgrey;
-    
+    padding: 4rem; 
+}
+.form-review_title{
+    padding-bottom: 1rem;
+    color: #007bff;
+}
+
+#name, #review, #rating{
+    margin-bottom: 1rem;
+}
+input[type="radio"] {
+    display: none;
+    text-align: center;
+}
+
+.star {
+    display: flex;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 5px;
+  }
+.rating-input {
+    display: flex;
+    justify-content: left; 
+    gap: 5px; 
 }

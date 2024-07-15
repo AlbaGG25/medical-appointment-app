@@ -4,6 +4,7 @@
     color: black;
     text-align: center;
 }
+
 th, td {
   border-bottom: 1px solid black;
   padding: 8px;
@@ -19,4 +20,6 @@ tbody tr:nth-child(even) {
 }
 .review-table_body-button{
     width: 60%;
+    font-size: 0.9rem; 
+    font-weight: 600;
 }
