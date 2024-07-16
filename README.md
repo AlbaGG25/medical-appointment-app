@@ -23,5 +23,5 @@ The Medical Appointment Booking website is a user-friendly platform designed to 
 ### Steps
 **Clone the repository:**
    ```bash
-   git clone https://github.com/AlbaGG25/frontend_capstone.git
-   cd frontend_capstone
+   git clone https://github.com/AlbaGG25/medical-appointment-app.git
+   cd medical-appointment-app
